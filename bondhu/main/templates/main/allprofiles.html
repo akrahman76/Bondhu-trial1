@@ -1,0 +1,47 @@
+{% extends 'main/base.html'%}
+
+{%block title%}
+All Profiles
+{%endblock%}
+
+{% load static %}
+
+{%block content%}
+
+{% include 'module/header.html' %}
+<div class="container">
+<div class="row">
+  
+    {% for item in ls %}
+        
+            <!-- <li> {{ item.name }} </li>
+            <li> {{ item.gender }} </li>
+            <li> {{ item.date_of_birth }} </li> -->
+            <div class="col-md-3">
+            <div class="card mb-4"style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin:auto;">
+                
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.name }}</h5>
+                  <hr>
+                  <p class="card-text">
+                   <p> Gender: {{ item.gender }}</p>
+                    <p>Date of Birth: {{ item.date_of_birth }}</p>
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+              
+
+                    <!-- <h5>{{ item.name }}</h5>
+                    <p> Gender: {{ item.gender }}</p>
+                    <p>Date of Birth: {{ item.date_of_birth }}</p>
+                    -->
+        
+    {% endfor %}
+    
+   
+</div>
+</div>
+
+{%endblock%}

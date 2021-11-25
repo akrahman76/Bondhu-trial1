@@ -1,0 +1,4 @@
+#navbarNav ul > li.navbar-active a {
+    color: #7c7c7c;
+    border-bottom: 2px solid #1d2dfd;
+  }
