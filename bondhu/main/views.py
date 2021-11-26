@@ -9,7 +9,8 @@ from .forms import CreateNewProfile
 # Create your views here.
 
 def home(response):
-    return render(response, "main/home.html",{})
+    ls = Profiles.objects.all()
+    return render(response, "main/home.html",{"ls":ls})
 
 def prediction(response):
     return render(response, "main/prediction.html",{})
@@ -31,9 +32,13 @@ def addProfile(response):
     return render(response, "main/addProfile.html",{"form":form})
 
 
-def allprofiles(response):
-    ls = Profiles.objects.all()
-    return render(response, "main/allprofiles.html",{"ls":ls})
+# def allprofiles(response):
+#     ls = Profiles.objects.all()
+#     return render(response, "main/home.html",{"ls":ls})
+
+def history(response):
+
+    return render(response,"main/history.html")
 
 
 

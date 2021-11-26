@@ -6,35 +6,65 @@ Home
 {% load static %}
 {%block content%}
 
-<!-- <nav class="navbar navbar-expand-lg navbar-light ">
-  <a class="navbar-brand" href="#" style="font-family: Gabriola; font-size:40px ;">
-    <img src="{%static 'images/smiley_logo_small.png' %}" alt="">
-    Bondhu
-    
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav" style="font-size: 20px; padding-left:40px;">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/prediction">Prediction</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      
-    </ul>
-  </div>
-</nav> -->
-
 
 {% include 'module/header.html' %}
+<!-- add profile -->
+<!-- modal -->
+<br>
 
-<!-- End Intro -->
+<div class="container">
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-success"  style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><a href="/addprofile">
+  Add New Profile
+</a>
+ 
+</button>
+
+<!-- Modal -->
+
+
+</div>
+
+<br>
+
+<!-- all Profiles -->
+<div class="container">
+  
+  <h3 style="text-align: center;">All Profiles</h3>
+  <hr>
+  <br>
+  <div class="row">
+    
+      {% for item in ls %}
+          
+              <!-- <li> {{ item.name }} </li>
+              <li> {{ item.gender }} </li>
+              <li> {{ item.date_of_birth }} </li> -->
+              <div class="col-md-3">
+              <div class="card mb-4"style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin:auto;">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <hr>
+                    <p class="card-text">
+                     <p> Gender: {{ item.gender }}</p>
+                      <p>Date of Birth: {{ item.date_of_birth }}</p>
+                    </p>
+                    
+                  </div>
+                </div>
+              </div>
+          
+      {% endfor %}
+      
+     
+  </div>
+  <hr>
+  </div>
+
+
+
+<!-- End All profile -->
 
 
 
