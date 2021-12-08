@@ -7,6 +7,6 @@ urlpatterns = [
     path("addprofile/", views.addProfile,name="addProfile"),
     path("addprofile/success", views.home,name="home"),
     # path("allprofiles/", views.allprofiles,name="allprofiles"),
-    path("history/", views.history,name="history"),
+    path("history/<str:pk>", views.history,name="history"),
     
 ]

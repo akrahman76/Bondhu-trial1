@@ -44,12 +44,13 @@ Home
               <div class="card mb-4"style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); margin:auto;">
                   
                   <div class="card-body">
-                    <h5 class="card-title">{{ item.name }}</h5>
+                    <h5 class="card-title">{{ item.name | capfirst }}</h5>
                     <hr>
                     <p class="card-text">
-                     <p> Gender: {{ item.gender }}</p>
+                     <p> Gender: {{ item.gender | capfirst }}</p>
                       <p>Date of Birth: {{ item.date_of_birth }}</p>
                     </p>
+                    <button class="btn btn-outline-success"><a href='{% url "history" item.id %}'>See History</a> </button>
                     
                   </div>
                 </div>
@@ -59,7 +60,9 @@ Home
       
      
   </div>
+
   <hr>
+  {{v}}
   </div>
 
 
