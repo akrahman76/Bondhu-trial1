@@ -8,5 +8,5 @@ urlpatterns = [
     path("addprofile/success", views.home,name="home"),
     # path("allprofiles/", views.allprofiles,name="allprofiles"),
     path("history/<str:pk>", views.history,name="history"),
-    
+    path("home/", views.home,name="home"),
 ]

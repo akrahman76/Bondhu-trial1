@@ -2,6 +2,7 @@ from django import forms
 from django.shortcuts import render
 from django.http.response import HttpResponseRedirect
 from django.http import HttpResponse, request
+from main.models import History
 
 from main.models import Profiles
 from .forms import CreateNewProfile
@@ -38,11 +39,13 @@ def addProfile(response):
 
 def history(response,pk):
     #ls = Profiles.objects.all()
-    hist= Profiles.objects.get(id=pk)
+    #p = Profiles.objects.get(id=pk)
+    hist= History.objects.get(id=pk)
     context = {'hist':hist}
    
     
     return render(response,"main/history.html",context)
+
 
 
 

@@ -12,7 +12,7 @@ Home
 <div class="container">
     
   
-  <h4 class="text-center">{{hist.name | capfirst}}'s Detailed History</h4>
+  <h4 class="text-center">{{hist.profile.name | capfirst}}'s Detailed History</h4>
   
   <br>
   
@@ -29,8 +29,8 @@ Home
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
+        <td>{{hist.date}}</td>
+        <td>{{hist.time}}</td>
         <td>@mdo</td>
       </tr>
       <tr>
